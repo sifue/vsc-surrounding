@@ -4,6 +4,7 @@
     "description": "Visual Studio Code extension to surround the selection with something",
     "version": "1.0.0",
     "publisher": "sifue",
+    "icon": "images/surrounding.png",
     "engines": {
         "vscode": "^0.10.10"
     },
