@@ -1,5 +1,5 @@
 # Surrounding
-extension for Visual Studio Code
+Extension for Visual Studio Code to surround the selection with something configurated.
 
 # Prepare
 Open your workspace folder.

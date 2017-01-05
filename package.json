@@ -2,7 +2,7 @@
     "name": "surrounding",
     "displayName": "Surrounding",
     "description": "Visual Studio Code extension to surround the selection with something configurated.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "sifue",
     "icon": "images/surrounding.png",
     "license": "MIT",
