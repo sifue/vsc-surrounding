@@ -1,12 +1,21 @@
 {
     "name": "surrounding",
     "displayName": "Surrounding",
-    "description": "Visual Studio Code extension to surround the selection with something",
+    "description": "Visual Studio Code extension to surround the selection with something configurated.",
     "version": "1.0.0",
     "publisher": "sifue",
     "icon": "images/surrounding.png",
+    "license": "MIT",
     "engines": {
         "vscode": "^0.10.10"
+    },
+    "bugs": {
+        "url": "https://github.com/sifue/vsc-surrounding/issues"
+    },
+    "homepage": "https://github.com/sifue/vsc-surrounding",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sifue/vsc-surrounding"
     },
     "categories": [
         "Other"

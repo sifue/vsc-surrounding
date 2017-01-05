@@ -3,8 +3,10 @@ extension for Visual Studio Code
 
 # Prepare
 Open your workspace folder.
+
 Open command palette with `cmd+shift+p` or `ctrl+shift+p`.
-Run `Surrounding: Add default config file to .vscode directory`
+
+Run `Surrounding: Add default config file to .vscode directory`.
 
 # Configure
 See `.vscode/srrounding.json`
