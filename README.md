@@ -81,6 +81,6 @@ To configure your own keyboard shortcuts,  Add follows to your *keybindings.json
     // ...
 ```
 
-# Reposicotry
+# Repository
 
 [https://github.com/sifue/vsc-surrounding](https://github.com/sifue/vsc-surrounding)
