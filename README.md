@@ -38,6 +38,10 @@ Example.
 
 ```
 
+After edit, Open command palette with `cmd+shift+p` or `ctrl+shift+p`.
+
+Run `Surrounding: Reload config file at .vscode directory`.
+
 | Index | Command name | Default keybind (Win) |
 |:----:|:----|:----|
 | 0 | extension.surrounding.command00 | ctrl+q ctrl+0 |

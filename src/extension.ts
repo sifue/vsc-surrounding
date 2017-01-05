@@ -26,6 +26,11 @@ export function activate(context: vscode.ExtensionContext) {
     });
     context.subscriptions.push(disposable);
 
+    disposable = vscode.commands.registerCommand('extension.surrounding.reloadConfig', () => {
+        readSettings();
+    });
+    context.subscriptions.push(disposable);
+
     let index = 0;
     let settingCount = 20;
     for (index = 0; index < settingCount ; index++) {

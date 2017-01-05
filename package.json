@@ -2,7 +2,7 @@
     "name": "surrounding",
     "displayName": "Surrounding",
     "description": "Visual Studio Code extension to surround the selection with something configurated.",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "publisher": "sifue",
     "icon": "images/surrounding.png",
     "license": "MIT",
@@ -22,6 +22,7 @@
     ],
     "activationEvents": [
         "onCommand:extension.surrounding.addDefaultConfig",
+        "onCommand:extension.surrounding.reloadConfig",
         "onCommand:extension.surrounding.command00",
         "onCommand:extension.surrounding.command01",
         "onCommand:extension.surrounding.command02",
@@ -48,6 +49,10 @@
         "commands": [{
                 "command": "extension.surrounding.addDefaultConfig",
                 "title": "Surrounding: Add default config file to .vscode directory"
+            },
+            {
+                "command": "extension.surrounding.reloadConfig",
+                "title": "Surrounding: Reload config file at .vscode directory"
             },
             {
                 "command": "extension.surrounding.command00",
