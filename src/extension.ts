@@ -20,12 +20,25 @@ let settings: SurroundingSettings = null;
 
 export function activate(context: vscode.ExtensionContext) {
     readSettings();
+
+    let disposable = vscode.commands.registerCommand('extension.surrounding.addDefaultConfig', () => {
+        writeSettings();
+    });
+    context.subscriptions.push(disposable);
+
     let index = 0;
-    let settingCount = 1;
+    let settingCount = 20;
     for (index = 0; index < settingCount ; index++) {
+        let commandString = '';
+        if (index < 10) {
+            commandString = 'extension.surrounding.command0' + index;
+        } else {
+            commandString = 'extension.surrounding.command' + index;
+        }
+
         let setting = settings.settings[index];
         if (setting) {
-            let disposable = vscode.commands.registerTextEditorCommand('extension.surrounding.command' + index, (textEditor, edit) => {
+            let disposable = vscode.commands.registerTextEditorCommand(commandString, (textEditor, edit) => {
                 doSurround(textEditor, edit, setting.prefix, setting.postfix);
             });
             context.subscriptions.push(disposable);
@@ -92,7 +105,6 @@ function readSettings(): void {
          '{ "index" : 18, "prefix" : "{", "postfix" : "}" },' +
          '{ "index" : 19, "prefix" : "{", "postfix" : "}" }' +
           '] }');
-        writeSettings();
     }
 }
 
