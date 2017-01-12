@@ -57,25 +57,19 @@ export function deactivate() {
 }
 
 function doSurround(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit, insBefore: string, insAfter: string) {
-
     const document = textEditor.document;
     const newSelections: vscode.Selection[] = [];
 
     textEditor.edit(editBuilder => {
-
         textEditor.selections.forEach(selection => {
-
             const adjust = selection.start.line == selection.end.line ? 1 : 0;
             editBuilder.insert(selection.start, insBefore);
             editBuilder.insert(selection.end, insAfter);
-            newSelections.push(new vscode.Selection(selection.start.translate(0, 1), selection.end.translate(0, adjust)));
-
+            newSelections.push(new vscode.Selection(selection.start.translate(0, 0), 
+            selection.end.translate(0, insBefore.length + insAfter.length)));
         });
     }).then(() => {
-
-        textEditor.selections
         textEditor.selections = newSelections;
-
     });
 }
 
