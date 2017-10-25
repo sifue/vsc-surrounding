@@ -19,7 +19,7 @@ Extension for Visual Studio Code to surround the selection with something config
   //...
 ```
 
-After configure user settings. Please run `Surrounding: Reload settings and config file` with command palette (`cmd+shift+p` or `ctrl+shift+p`.).
+After configure user settings, Please run `Surrounding: Reload settings and config file` with command palette (`cmd+shift+p` or `ctrl+shift+p`).
 
 ## Default keybinds
 
