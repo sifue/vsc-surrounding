@@ -23,11 +23,14 @@ export function activate(context: vscode.ExtensionContext) {
 
     let disposable = vscode.commands.registerCommand('extension.surrounding.addDefaultConfig', () => {
         writeSettings();
+        readSettings();
+        vscode.commands.executeCommand('workbench.action.reloadWindow');
     });
     context.subscriptions.push(disposable);
 
     disposable = vscode.commands.registerCommand('extension.surrounding.reloadConfig', () => {
         readSettings();
+        vscode.commands.executeCommand('workbench.action.reloadWindow');
     });
     context.subscriptions.push(disposable);
 
@@ -73,37 +76,65 @@ function doSurround(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit, 
     });
 }
 
+function isExistFile(file: string): boolean {
+    try {
+        fs.statSync(file);
+        return true
+    } catch (err) {
+        if (err.code === 'ENOENT') return false
+    }
+}
+
 function readSettings(): void {
     let file: string = vscode.workspace.rootPath + CONFIGFOLDER + CONFIGFILE
 
-    try {
-        settings = JSON.parse(fs.readFileSync(file).toString());
-        if (DEBUG) console.log("Settings read from: " + file)
-    }
-    catch (err) {
-        if (DEBUG) console.log("Default Settings")
-        settings = JSON.parse('{ "settings" : [' +
-         '{ "index" : 0, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 1, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 2, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 3, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 4, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 5, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 6, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 7, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 8, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 9, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 10, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 11, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 12, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 13, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 14, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 15, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 16, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 17, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 18, "prefix" : "{", "postfix" : "}" },' +
-         '{ "index" : 19, "prefix" : "{", "postfix" : "}" }' +
-          '] }');
+    if (isExistFile(file)) { // "./.vscode/surrounding.json" file take a priority.
+        try {
+            settings = JSON.parse(fs.readFileSync(file).toString());
+            if (DEBUG) console.log("Settings read from: " + file);
+        }
+        catch (err) {
+            if (DEBUG) console.log("Default Settings");
+            settings = JSON.parse('{ "settings" : [' +
+            '{ "index" : 0, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 1, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 2, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 3, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 4, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 5, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 6, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 7, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 8, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 9, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 10, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 11, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 12, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 13, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 14, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 15, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 16, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 17, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 18, "prefix" : "{", "postfix" : "}" },' +
+            '{ "index" : 19, "prefix" : "{", "postfix" : "}" }' +
+            '] }');
+        }
+    } else { // no surrounding.json
+        // load from setting.json
+        const config = vscode.workspace.getConfiguration('surrounding');
+        const commands = config.commands;
+        const loadSettings = { settings : [] };
+        for(let i = 0; i < 20; i++) {
+            let command = commands[i.toString()];
+            if(!command) {
+                command = {
+                    prefix : '{{',
+                    postfix : '}}'
+                };
+            }
+            command.index = i;
+            loadSettings.settings.push(command);
+        }
+        settings = loadSettings;
     }
 }
 

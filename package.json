@@ -1,273 +1,484 @@
 {
-    "name": "surrounding",
-    "displayName": "Surrounding",
-    "description": "Visual Studio Code extension to surround the selection with something configurated.",
-    "version": "1.2.0",
-    "publisher": "sifue",
-    "icon": "images/surrounding.png",
-    "license": "MIT",
-    "engines": {
-        "vscode": "^0.10.10"
-    },
-    "bugs": {
-        "url": "https://github.com/sifue/vsc-surrounding/issues"
-    },
-    "homepage": "https://github.com/sifue/vsc-surrounding",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sifue/vsc-surrounding"
-    },
-    "categories": [
-        "Other"
+  "name": "surrounding",
+  "displayName": "Surrounding",
+  "description": "Visual Studio Code extension to surround the selection with something configurated.",
+  "version": "1.3.0",
+  "publisher": "sifue",
+  "icon": "images/surrounding.png",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "bugs": {
+    "url": "https://github.com/sifue/vsc-surrounding/issues"
+  },
+  "homepage": "https://github.com/sifue/vsc-surrounding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sifue/vsc-surrounding"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.surrounding.addDefaultConfig",
+    "onCommand:extension.surrounding.reloadConfig",
+    "onCommand:extension.surrounding.command00",
+    "onCommand:extension.surrounding.command01",
+    "onCommand:extension.surrounding.command02",
+    "onCommand:extension.surrounding.command03",
+    "onCommand:extension.surrounding.command04",
+    "onCommand:extension.surrounding.command05",
+    "onCommand:extension.surrounding.command06",
+    "onCommand:extension.surrounding.command07",
+    "onCommand:extension.surrounding.command08",
+    "onCommand:extension.surrounding.command09",
+    "onCommand:extension.surrounding.command10",
+    "onCommand:extension.surrounding.command11",
+    "onCommand:extension.surrounding.command12",
+    "onCommand:extension.surrounding.command13",
+    "onCommand:extension.surrounding.command14",
+    "onCommand:extension.surrounding.command15",
+    "onCommand:extension.surrounding.command16",
+    "onCommand:extension.surrounding.command17",
+    "onCommand:extension.surrounding.command18",
+    "onCommand:extension.surrounding.command19"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.surrounding.addDefaultConfig",
+        "title": "Surrounding: Add default config file to .vscode directory"
+      },
+      {
+        "command": "extension.surrounding.reloadConfig",
+        "title": "Surrounding: Reload settings and config file"
+      },
+      {
+        "command": "extension.surrounding.command00",
+        "title": "Surrounding: Command 00"
+      },
+      {
+        "command": "extension.surrounding.command01",
+        "title": "Surrounding: Command 01"
+      },
+      {
+        "command": "extension.surrounding.command02",
+        "title": "Surrounding: Command 02"
+      },
+      {
+        "command": "extension.surrounding.command03",
+        "title": "Surrounding: Command 03"
+      },
+      {
+        "command": "extension.surrounding.command04",
+        "title": "Surrounding: Command 04"
+      },
+      {
+        "command": "extension.surrounding.command05",
+        "title": "Surrounding: Command 05"
+      },
+      {
+        "command": "extension.surrounding.command06",
+        "title": "Surrounding: Command 06"
+      },
+      {
+        "command": "extension.surrounding.command07",
+        "title": "Surrounding: Command 07"
+      },
+      {
+        "command": "extension.surrounding.command08",
+        "title": "Surrounding: Command 08"
+      },
+      {
+        "command": "extension.surrounding.command09",
+        "title": "Surrounding: Command 09"
+      },
+      {
+        "command": "extension.surrounding.command10",
+        "title": "Surrounding: Command 10"
+      },
+      {
+        "command": "extension.surrounding.command11",
+        "title": "Surrounding: Command 11"
+      },
+      {
+        "command": "extension.surrounding.command12",
+        "title": "Surrounding: Command 12"
+      },
+      {
+        "command": "extension.surrounding.command13",
+        "title": "Surrounding: Command 13"
+      },
+      {
+        "command": "extension.surrounding.command14",
+        "title": "Surrounding: Command 14"
+      },
+      {
+        "command": "extension.surrounding.command15",
+        "title": "Surrounding: Command 15"
+      },
+      {
+        "command": "extension.surrounding.command16",
+        "title": "Surrounding: Command 16"
+      },
+      {
+        "command": "extension.surrounding.command17",
+        "title": "Surrounding: Command 17"
+      },
+      {
+        "command": "extension.surrounding.command18",
+        "title": "Surrounding: Command 18"
+      },
+      {
+        "command": "extension.surrounding.command19",
+        "title": "Surrounding: Command 19"
+      },
+      {
+        "command": "extension.surrounding.command20",
+        "title": "Surrounding: Command 20"
+      }
     ],
-    "activationEvents": [
-        "onCommand:extension.surrounding.addDefaultConfig",
-        "onCommand:extension.surrounding.reloadConfig",
-        "onCommand:extension.surrounding.command00",
-        "onCommand:extension.surrounding.command01",
-        "onCommand:extension.surrounding.command02",
-        "onCommand:extension.surrounding.command03",
-        "onCommand:extension.surrounding.command04",
-        "onCommand:extension.surrounding.command05",
-        "onCommand:extension.surrounding.command06",
-        "onCommand:extension.surrounding.command07",
-        "onCommand:extension.surrounding.command08",
-        "onCommand:extension.surrounding.command09",
-        "onCommand:extension.surrounding.command10",
-        "onCommand:extension.surrounding.command11",
-        "onCommand:extension.surrounding.command12",
-        "onCommand:extension.surrounding.command13",
-        "onCommand:extension.surrounding.command14",
-        "onCommand:extension.surrounding.command15",
-        "onCommand:extension.surrounding.command16",
-        "onCommand:extension.surrounding.command17",
-        "onCommand:extension.surrounding.command18",
-        "onCommand:extension.surrounding.command19"
+    "keybindings": [
+      {
+        "command": "extension.surrounding.command00",
+        "key": "ctrl+q ctrl+0",
+        "mac": "cmd+q cmd+0",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command01",
+        "key": "ctrl+q ctrl+1",
+        "mac": "cmd+q cmd+1",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command02",
+        "key": "ctrl+q ctrl+2",
+        "mac": "cmd+q cmd+2",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command03",
+        "key": "ctrl+q ctrl+3",
+        "mac": "cmd+q cmd+3",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command04",
+        "key": "ctrl+q ctrl+4",
+        "mac": "cmd+q cmd+4",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command05",
+        "key": "ctrl+q ctrl+5",
+        "mac": "cmd+q cmd+5",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command06",
+        "key": "ctrl+q ctrl+6",
+        "mac": "cmd+q cmd+6",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command07",
+        "key": "ctrl+q ctrl+7",
+        "mac": "cmd+q cmd+7",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command08",
+        "key": "ctrl+q ctrl+8",
+        "mac": "cmd+q cmd+8",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command09",
+        "key": "ctrl+q ctrl+9",
+        "mac": "cmd+q cmd+9",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command10",
+        "key": "ctrl+q ctrl+F10",
+        "mac": "cmd+q cmd+F10",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command11",
+        "key": "ctrl+q ctrl+F1",
+        "mac": "cmd+q cmd+F1",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command12",
+        "key": "ctrl+q ctrl+F2",
+        "mac": "cmd+q cmd+F2",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command13",
+        "key": "ctrl+q ctrl+F3",
+        "mac": "cmd+q cmd+F3",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command14",
+        "key": "ctrl+q ctrl+F4",
+        "mac": "cmd+q cmd+F4",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command15",
+        "key": "ctrl+q ctrl+F5",
+        "mac": "cmd+q cmd+F5",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command16",
+        "key": "ctrl+q ctrl+F6",
+        "mac": "cmd+q cmd+F6",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command17",
+        "key": "ctrl+q ctrl+F7",
+        "mac": "cmd+q cmd+F7",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command18",
+        "key": "ctrl+q ctrl+F8",
+        "mac": "cmd+q cmd+F8",
+        "when": "editorHasSelection && editorTextFocus"
+      },
+      {
+        "command": "extension.surrounding.command19",
+        "key": "ctrl+q ctrl+F9",
+        "mac": "cmd+q cmd+F9",
+        "when": "editorHasSelection && editorTextFocus"
+      }
     ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [{
-                "command": "extension.surrounding.addDefaultConfig",
-                "title": "Surrounding: Add default config file to .vscode directory"
-            },
-            {
-                "command": "extension.surrounding.reloadConfig",
-                "title": "Surrounding: Reload config file at .vscode directory"
-            },
-            {
-                "command": "extension.surrounding.command00",
-                "title": "Surrounding: Command 00"
-            },
-            {
-                "command": "extension.surrounding.command01",
-                "title": "Surrounding: Command 01"
-            },
-            {
-                "command": "extension.surrounding.command02",
-                "title": "Surrounding: Command 02"
-            },
-            {
-                "command": "extension.surrounding.command03",
-                "title": "Surrounding: Command 03"
-            },
-            {
-                "command": "extension.surrounding.command04",
-                "title": "Surrounding: Command 04"
-            },
-            {
-                "command": "extension.surrounding.command05",
-                "title": "Surrounding: Command 05"
-            },
-            {
-                "command": "extension.surrounding.command06",
-                "title": "Surrounding: Command 06"
-            },
-            {
-                "command": "extension.surrounding.command07",
-                "title": "Surrounding: Command 07"
-            },
-            {
-                "command": "extension.surrounding.command08",
-                "title": "Surrounding: Command 08"
-            },
-            {
-                "command": "extension.surrounding.command09",
-                "title": "Surrounding: Command 09"
-            },
-            {
-                "command": "extension.surrounding.command10",
-                "title": "Surrounding: Command 10"
-            },
-            {
-                "command": "extension.surrounding.command11",
-                "title": "Surrounding: Command 11"
-            },
-            {
-                "command": "extension.surrounding.command12",
-                "title": "Surrounding: Command 12"
-            },
-            {
-                "command": "extension.surrounding.command13",
-                "title": "Surrounding: Command 13"
-            },
-            {
-                "command": "extension.surrounding.command14",
-                "title": "Surrounding: Command 14"
-            },
-            {
-                "command": "extension.surrounding.command15",
-                "title": "Surrounding: Command 15"
-            },
-            {
-                "command": "extension.surrounding.command16",
-                "title": "Surrounding: Command 16"
-            },
-            {
-                "command": "extension.surrounding.command17",
-                "title": "Surrounding: Command 17"
-            },
-            {
-                "command": "extension.surrounding.command18",
-                "title": "Surrounding: Command 18"
-            },
-            {
-                "command": "extension.surrounding.command19",
-                "title": "Surrounding: Command 19"
-            },
-            {
-                "command": "extension.surrounding.command20",
-                "title": "Surrounding: Command 20"
-            }
-        ],
-        "keybindings": [{
-                "command": "extension.surrounding.command00",
-                "key": "ctrl+q ctrl+0",
-                "mac": "cmd+q cmd+0",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command01",
-                "key": "ctrl+q ctrl+1",
-                "mac": "cmd+q cmd+1",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command02",
-                "key": "ctrl+q ctrl+2",
-                "mac": "cmd+q cmd+2",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command03",
-                "key": "ctrl+q ctrl+3",
-                "mac": "cmd+q cmd+3",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command04",
-                "key": "ctrl+q ctrl+4",
-                "mac": "cmd+q cmd+4",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command05",
-                "key": "ctrl+q ctrl+5",
-                "mac": "cmd+q cmd+5",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command06",
-                "key": "ctrl+q ctrl+6",
-                "mac": "cmd+q cmd+6",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command07",
-                "key": "ctrl+q ctrl+7",
-                "mac": "cmd+q cmd+7",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command08",
-                "key": "ctrl+q ctrl+8",
-                "mac": "cmd+q cmd+8",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command09",
-                "key": "ctrl+q ctrl+9",
-                "mac": "cmd+q cmd+9",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command10",
-                "key": "ctrl+q ctrl+F10",
-                "mac": "cmd+q cmd+F10",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command11",
-                "key": "ctrl+q ctrl+F1",
-                "mac": "cmd+q cmd+F1",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command12",
-                "key": "ctrl+q ctrl+F2",
-                "mac": "cmd+q cmd+F2",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command13",
-                "key": "ctrl+q ctrl+F3",
-                "mac": "cmd+q cmd+F3",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command14",
-                "key": "ctrl+q ctrl+F4",
-                "mac": "cmd+q cmd+F4",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command15",
-                "key": "ctrl+q ctrl+F5",
-                "mac": "cmd+q cmd+F5",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command16",
-                "key": "ctrl+q ctrl+F6",
-                "mac": "cmd+q cmd+F6",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command17",
-                "key": "ctrl+q ctrl+F7",
-                "mac": "cmd+q cmd+F7",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command18",
-                "key": "ctrl+q ctrl+F8",
-                "mac": "cmd+q cmd+F8",
-                "when": "editorHasSelection && editorTextFocus"
-            },
-            {
-                "command": "extension.surrounding.command19",
-                "key": "ctrl+q ctrl+F9",
-                "mac": "cmd+q cmd+F9",
-                "when": "editorHasSelection && editorTextFocus"
-            }
-        ]
-    },
-    "scripts": {
-        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "devDependencies": {
-        "typescript": "^1.8.5",
-        "vscode": "^0.11.0"
-    }
+    "configuration": {
+      "type": "object",
+      "title": "Surrounding configuration",
+      "properties": {
+        "surrounding.commands.0.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command00 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.0.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command00 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.1.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command01 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.1.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command01 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.2.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command02 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.2.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command02 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.3.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command03 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.3.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command03 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.4.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command04 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.4.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command04 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.5.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command05 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.5.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command05 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.6.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command06 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.6.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command06 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.7.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command07 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.7.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command07 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.8.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command08 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.8.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command08 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.9.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command09 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.9.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command09 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.10.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command10 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.10.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command10 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.11.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command11 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.11.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command11 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.12.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command12 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.12.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command12 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.13.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command13 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.13.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command13 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.14.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command14 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.14.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command14 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.15.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command15 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.15.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command15 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.16.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command16 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.16.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command16 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.17.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command17 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.17.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command17 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.18.prefix": {
+            "type": ["string"],
+            "default": "{",
+            "description": "Prefix of command18 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.18.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command18 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.19.prefix": {
+          "type": ["string"],
+          "default": "{",
+          "description": "Prefix of command19 (Need Surrounding: Reload)"
+        },
+        "surrounding.commands.19.postfix": {
+          "type": ["string"],
+          "default": "}",
+          "description": "Postfix of command19 (Need Surrounding: Reload)"
+        }
+      }
+  }
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "vscode": "^0.11.18"
+  }
 }
