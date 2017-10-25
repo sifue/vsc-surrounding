@@ -7,7 +7,7 @@
   "icon": "images/surrounding.png",
   "license": "MIT",
   "engines": {
-    "vscode": "^0.10.10"
+    "vscode": "^1.17.0"
   },
   "bugs": {
     "url": "https://github.com/sifue/vsc-surrounding/issues"
@@ -44,7 +44,7 @@
     "onCommand:extension.surrounding.command18",
     "onCommand:extension.surrounding.command19"
   ],
-  "main": "./out/src/extension",
+  "main": "./out/extension",
   "contributes": {
     "commands": [
       {
@@ -267,218 +267,299 @@
       "title": "Surrounding configuration",
       "properties": {
         "surrounding.commands.0.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command00 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command00 (Need Surrounding: Reload)"
         },
         "surrounding.commands.0.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command00 (Need Surrounding: Reload)"
         },
         "surrounding.commands.1.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command01 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command01 (Need Surrounding: Reload)"
         },
         "surrounding.commands.1.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command01 (Need Surrounding: Reload)"
         },
         "surrounding.commands.2.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command02 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command02 (Need Surrounding: Reload)"
         },
         "surrounding.commands.2.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command02 (Need Surrounding: Reload)"
         },
         "surrounding.commands.3.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command03 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command03 (Need Surrounding: Reload)"
         },
         "surrounding.commands.3.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command03 (Need Surrounding: Reload)"
         },
         "surrounding.commands.4.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command04 (Need Surrounding: Reload)"
         },
         "surrounding.commands.4.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command04 (Need Surrounding: Reload)"
         },
         "surrounding.commands.5.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command05 (Need Surrounding: Reload)"
         },
         "surrounding.commands.5.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command05 (Need Surrounding: Reload)"
         },
         "surrounding.commands.6.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command06 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command06 (Need Surrounding: Reload)"
         },
         "surrounding.commands.6.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command06 (Need Surrounding: Reload)"
         },
         "surrounding.commands.7.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command07 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command07 (Need Surrounding: Reload)"
         },
         "surrounding.commands.7.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command07 (Need Surrounding: Reload)"
         },
         "surrounding.commands.8.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command08 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command08 (Need Surrounding: Reload)"
         },
         "surrounding.commands.8.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command08 (Need Surrounding: Reload)"
         },
         "surrounding.commands.9.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command09 (Need Surrounding: Reload)"
         },
         "surrounding.commands.9.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command09 (Need Surrounding: Reload)"
         },
         "surrounding.commands.10.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command10 (Need Surrounding: Reload)"
         },
         "surrounding.commands.10.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command10 (Need Surrounding: Reload)"
         },
         "surrounding.commands.11.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command11 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command11 (Need Surrounding: Reload)"
         },
         "surrounding.commands.11.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command11 (Need Surrounding: Reload)"
         },
         "surrounding.commands.12.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command12 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command12 (Need Surrounding: Reload)"
         },
         "surrounding.commands.12.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command12 (Need Surrounding: Reload)"
         },
         "surrounding.commands.13.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command13 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command13 (Need Surrounding: Reload)"
         },
         "surrounding.commands.13.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command13 (Need Surrounding: Reload)"
         },
         "surrounding.commands.14.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command14 (Need Surrounding: Reload)"
         },
         "surrounding.commands.14.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command14 (Need Surrounding: Reload)"
         },
         "surrounding.commands.15.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command15 (Need Surrounding: Reload)"
         },
         "surrounding.commands.15.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command15 (Need Surrounding: Reload)"
         },
         "surrounding.commands.16.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command16 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command16 (Need Surrounding: Reload)"
         },
         "surrounding.commands.16.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command16 (Need Surrounding: Reload)"
         },
         "surrounding.commands.17.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command17 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command17 (Need Surrounding: Reload)"
         },
         "surrounding.commands.17.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command17 (Need Surrounding: Reload)"
         },
         "surrounding.commands.18.prefix": {
-            "type": ["string"],
-            "default": "{",
-            "description": "Prefix of command18 (Need Surrounding: Reload)"
+          "type": [
+            "string"
+          ],
+          "default": "{",
+          "description": "Prefix of command18 (Need Surrounding: Reload)"
         },
         "surrounding.commands.18.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command18 (Need Surrounding: Reload)"
         },
         "surrounding.commands.19.prefix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "{",
           "description": "Prefix of command19 (Need Surrounding: Reload)"
         },
         "surrounding.commands.19.postfix": {
-          "type": ["string"],
+          "type": [
+            "string"
+          ],
           "default": "}",
           "description": "Postfix of command19 (Need Surrounding: Reload)"
         }
       }
-  }
+    }
   },
   "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "typescript": "^1.8.5",
-    "vscode": "^0.11.0"
-  },
-  "dependencies": {
-    "vscode": "^0.11.18"
+    "typescript": "^2.5.3",
+    "vscode": "^1.1.5",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
   }
 }
