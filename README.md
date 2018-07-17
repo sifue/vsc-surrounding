@@ -55,7 +55,7 @@ Open command palette with `cmd+shift+p` or `ctrl+shift+p`.
 Run `Surrounding: Add default config file to .vscode directory`.
 
 ### Configure
-See `.vscode/srrounding.json`
+See `.vscode/surrounding.json`
 
 ```
 {
